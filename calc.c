@@ -14,32 +14,32 @@ int main()
 
   while(true)
   {
-	  printf("enter a calculation using A +,-,*,/ B format.\n");
-	  gmp_scanf("%Ff%c%Ff", number1, &function, number2);
+      printf("enter a calculation using A +,-,*,/ B format.\n");
+      gmp_scanf("%Ff%c%Ff", number1, &function, number2);
 
-	  if (function == '+')
-	  {
-      mpf_add(output, number1, number2);
-      gmp_printf("%Ff\n", output);
-	  }
+      if (function == '+')
+      {
+        mpf_add(output, number1, number2);
+        gmp_printf("%Ff\n", output);
+      }
 
-	  if (function == '-')
-	  {
-      mpf_sub(output, number1, number2);
-      gmp_printf("%Ff\n", output);
-	  }
+      if (function == '-')
+      {
+        mpf_sub(output, number1, number2);
+        gmp_printf("%Ff\n", output);
+      }
 
-	  if (function == 'x' || function == '*')
-    {
-      mpf_mul(output, number1, number2);
-      gmp_printf("%Ff\n", output);
-	  }
+      if (function == 'x' || function == '*')
+      {
+        mpf_mul(output, number1, number2);
+        gmp_printf("%Ff\n", output);
+      }
 
-	  if (function == '/')
-    {
-      mpf_div(output, number1, number2);
-      gmp_printf("%Ff\n", output);
-	  }
+      if (function == '/')
+      {
+        mpf_div(output, number1, number2);
+        gmp_printf("%Ff\n", output);
+      }
   }
 
   mpf_clear(number1);
